@@ -1,0 +1,88 @@
+/* Center the content vertically */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #ffffff;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Style the main container */
+#introduction, #projects, #education, #awards-certificates, #military-service {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  margin: 20px 0;
+}
+
+/* Style headings */
+h2, h3, h4 {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+h1 {
+    color: #000000;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+/* Style links */
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Style lists */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Style paragraphs */
+p {
+  line-height: 1.6;
+}
+
+/* Add some spacing between sections */
+section {
+  margin-bottom: 40px;
+}
+
+/* Additional electric blue theme styles */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, #00ffff, #0000ff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  z-index: -1;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#introduction, #projects, #education, #military-service {
+  position: relative;
+  z-index: 1;
+}
